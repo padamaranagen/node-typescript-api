@@ -51,7 +51,7 @@ app.use(expressWinston.errorLogger({
 
 // this is a simple route to make sure everything is working properly
 app.get('/', (req: express.Request, res: express.Response) => {
-    res.status(200).send(`Server up and running!`)
+    res.status(200).send(`<h1>Server up and running!</h1>`)
 });
 
 server.listen(port, () => {
