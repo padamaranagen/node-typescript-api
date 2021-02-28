@@ -31,7 +31,8 @@
     "shortid": "^2.2.16",
     "winston": "^3.3.3",
     "nodemon": "^2.0.7",
-    "ts-node": "^9.1.1"
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",
