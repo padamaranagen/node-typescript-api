@@ -395,3 +395,31 @@ curl --request POST 'localhost:3000/users' \
 This and all other types of requests that we built skeletons for will look quite similar.
 
 ## Poised for Rapid Node.js REST API Development with TypeScript
+
+
+In this article, we started to create a REST API by configuring the project from scratch and diving into the basics of the Express.js framework. Then, we took our first step toward mastering TypeScript by building a pattern with UsersRoutesConfig extending CommonRoutesConfig, a pattern that we will reuse for the next article in this series. We finished by configuring our app.ts entry point to use our new routes and package.json with scripts to build and run our application.
+
+
+But even the basics of a REST API made with Express.js and TypeScript are fairly involved. In the next part of this series, we focus on creating proper controllers for the users resource and dig into some useful patterns for services, middleware, controllers, and models.
+
+
+## REST API Services, Middleware, Controllers, and Models
+
+As promised, we’ll now get into details about these modules:
+
+* Services that make our code cleaner by encapsulating business logic operations into functions that middleware and controllers can call.
+* Middleware that will validate prerequisite conditions before Express.js calls the appropriate controller function.
+* Controllers that use services to process the request before finally sending a response to the requester.
+* Models that describe our data and aid in compile-time checks.
+
+We will also add a very rudimentary database that is in no way suitable for production. (Its only purpose is to make this tutorial easier to follow, paving the way for our next article to delve into database connection and integration with MongoDB and Mongoose.)
+
+
+## Hands-on: First Steps with DAOs, DTOs, and Our Temporary Database
+
+For this part of our tutorial, our database won’t even use files. It will simply keep user data in an array, which means the data evaporates whenever we quit Node.js. It will support only the most basic ```create, read, update, and delete``` (CRUD) operations.
+
+We are going to use two concepts here:
+
+* Data access objects (DAOs)
+* Data transfer objects (DTOs)
